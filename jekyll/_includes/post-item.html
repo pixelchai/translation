@@ -1,0 +1,11 @@
+<div class="list-item">
+    <h2 class="list-post-title">
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </h2>
+    <div class="meta">
+        {% for artist in post.artists %}
+        <a class="artist" href="{{ site.baseurl }}/{{ artist }}">{{ artist }}</a>
+        {% endfor %}
+        <time>{{ post.date | date_to_string }}</time>
+    </div>
+</div>

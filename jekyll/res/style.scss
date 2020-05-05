@@ -305,8 +305,6 @@ tbody tr:nth-child(odd) th {
   }
 
   .masthead-nav {
-    margin-bottom: 2rem;
-
     a {
       color: #aaa;
       font-weight: 300;
@@ -339,11 +337,6 @@ tbody tr:nth-child(odd) th {
   &-title {
     margin-bottom: .25rem;
   }
-  &-date {
-    margin-bottom: 2rem;
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
 }
 
 .list {
@@ -357,28 +350,6 @@ tbody tr:nth-child(odd) th {
       &:focus {
         text-decoration: none;
       }
-    }
-  }
-  &-post-meta {
-    margin-bottom: 1rem;
-    font-size: .75rem;
-    // text-transform: uppercase;
-  }
-
-  &-post-artists {
-    margin-bottom: 0.3rem;
-    font-size: .75rem;
-
-    .artist{
-      font-weight: 600;
-      color: #333;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-
-      margin-right: 0.3rem;
     }
   }
 }
@@ -450,3 +421,5 @@ tbody tr:nth-child(odd) th {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+@import 'pixel';

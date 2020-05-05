@@ -1,0 +1,35 @@
+.masthead{
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+
+    &-title{
+        // margin-bottom: 0;
+        display: inline-block;
+    }
+    &-nav{
+        display: inline-block;
+        float: right;
+    }
+    
+}
+
+.page-title {
+    margin-bottom: 1.5rem;
+}
+
+.meta {
+    margin-bottom: 1rem;
+    font-size: .75rem;
+
+    .artist{
+        font-weight: 600;
+        color: #333;
+
+        &:hover,
+        &:focus {
+        text-decoration: none;
+        }
+
+        margin-right: 0.2rem;
+    }
+}

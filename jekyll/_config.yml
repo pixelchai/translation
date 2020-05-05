@@ -11,26 +11,8 @@ twitter:
 baseurl:            "/translation"
 permalink:          /:categories/:title/
 
-
-# Markdown
 markdown:           kramdown
 
-# Navigation
-nav:
-  - name:           "About"
-    remote:         false
-    localpath:      "about"
-
-# Sass
-sass:
-  style:            :compressed
-
-# collections:
-collections:
-  category:
-    output: true
-
-# Scopes
 defaults:
   -
     scope:
@@ -41,3 +23,7 @@ defaults:
 
 plugins:
   - jekyll-seo-tag
+
+sass:
+  sass_dir: res/
+  style: compressed
