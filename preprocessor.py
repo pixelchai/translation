@@ -42,12 +42,13 @@ def process_content(content):
 class LyricsFile:
     def __init__(self, file_name, artist_id):
         self.file_name = file_name
-        # self.song_id = ""
         self.artist_ids = [artist_id]
 
         self.lang = ""
         self.section_titles = []
         self.section_texts = []
+
+        self.post = ""
 
     def _parse_header(self, header):
         for match in re.finditer(r"([a-zA-Z\-_]+):\s+([a-zA-Z\-_]+)", header):
@@ -65,10 +66,8 @@ class LyricsFile:
             self.section_texts.append(text)
     
     def parse(self, text):
-        # parse name
-        # self.song_id = re.match(r"(?:\d+-){3}(.+)\.", self.file_name).group(1)
-
-        header, contents = re.match(r"^((?:[a-zA-Z\-_]+:\s+[a-zA-Z\-_]+\n)+)\n([\s\S]+)", text).groups()
+        header, post, contents = re.match(r"^((?:[a-zA-Z\-_]+:\s+[a-zA-Z\-_]+\n)+)\n([\s\S]*?)(?=-{3,}\[(?:.+)\]-{3,})([\s\S]*)", text).groups()
+        self.post = post.strip()
         self._parse_header(header)
         self._parse_contents(contents)
         return self
@@ -81,13 +80,16 @@ class LyricsFile:
 
         file_name = os.path.splitext(self.file_name)[0]
 
-        with open(os.path.join(posts_folder, file_name + ".html"), "w") as fh:
+        with open(os.path.join(posts_folder, file_name + ".md"), "w") as fh:
             fh.write(YAML_SEPARATOR)
             fh.write(YAML_KEY_VALUE.format("layout", "post"))
             fh.write(YAML_KEY_VALUE.format("title", '"' + "・".join(self.section_titles) + '"'))
             fh.write(YAML_KEY_VALUE.format("artist_ids", str(self.artist_ids)))
             fh.write(YAML_SEPARATOR)
             fh.write("\n")
+
+            fh.write(self.post)
+            fh.write("\n\n")
 
             num_sections = len(self.section_texts)
             for section_no in range(num_sections):
