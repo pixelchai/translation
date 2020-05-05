@@ -37,3 +37,14 @@
 .separator {
     margin-right: 4px;
 }
+
+.lyrics {
+    margin-bottom: 3rem;
+
+    &-type {
+        font-weight: 600;
+        hr {
+            margin-top: 0.3rem;
+        }
+    }
+}

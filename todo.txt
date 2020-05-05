@@ -1,0 +1,2 @@
+Implement language tags
+Implement tabs for different lyrics text
