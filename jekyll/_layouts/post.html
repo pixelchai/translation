@@ -5,9 +5,7 @@ layout: default
 <div class="content post">
   <h1 class="post-title">{{ page.title }}</h1>
   <div class="meta">
-    {% for artist in page.artists %}
-    <a class="artist" href="{{ site.baseurl }}/{{ artist }}">{{ artist }}</a>
-    {% endfor %}
+    {% include artist-names.html artist_ids=page.artist_ids %}
     <time>{{ page.date | date_to_string }}</time>
   </div>
   {{ content }}
