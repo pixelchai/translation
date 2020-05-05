@@ -3,10 +3,9 @@
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </h2>
     <div class="meta">
-        {% assign i = post.artists | size %}
-        {% for artist_id in post.artists %}
-            {% include artist-name.html %}
-            <a class="artist" href="{{ site.baseurl }}/{{ artist_id }}">{{ artist_name }}</a>
+        {% assign i = post.artist_ids | size %}
+        {% for artist_id in post.artist_ids %}
+            <a class="artist" href="{{ site.baseurl }}/{{ artist_id }}">{% include artist-name artist_id=artist_id %}</a>
             {% if i > 1 %}
                 <span class="separator">/</span>
             {% endif %}

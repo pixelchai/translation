@@ -1,0 +1,1 @@
+{{ site.data.artists[include.artist_id] | join: "・" }}

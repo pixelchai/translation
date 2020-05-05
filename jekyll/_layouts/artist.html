@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1 class="page-title">{{ page.artist }}</h1>
+<h1 class="page-title">{% include artist-name artist_id=page.artist_id %}</h1>
 
 {% for post in site.posts %}
   {% include post-item.html %}
