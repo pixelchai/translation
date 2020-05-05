@@ -21,10 +21,15 @@ layout: default
 {% else %}
 {% for post in site.posts %}
   <div class="list-item">
+    <!-- <div class="list-post-artists">
+      {% for artist in post.artists %}
+      <a class="artist" href="{{ site.baseurl }}/{{ artist }}">{{ artist }}</a>
+      {% endfor %}
+    </div> -->
     <h2 class="list-post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </h2>
-    <div class="list-post-date">
+    <div class="list-post-meta">
       <time>{{ post.date | date_to_string }}</time>
     </div>
   </div>

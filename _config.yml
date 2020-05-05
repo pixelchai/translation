@@ -9,7 +9,8 @@ twitter:
 
 # URL
 baseurl:            "/translation"
-permalink:          /:year/:month/:day/:title/
+permalink:          /:categories/:title/
+
 
 # Markdown
 markdown:           kramdown
@@ -24,20 +25,19 @@ nav:
 sass:
   style:            :compressed
 
+# collections:
+collections:
+  category:
+    output: true
+
 # Scopes
 defaults:
   -
     scope:
       path:         ""
-      type:         "pages"
+      type:         artists
     values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
+      layout:       "artist"
 
 plugins:
   - jekyll-seo-tag
