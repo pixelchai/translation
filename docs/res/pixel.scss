@@ -1,10 +1,18 @@
 .masthead{
     border-bottom: 1px solid #eee;
     margin-bottom: 2rem;
+    padding-bottom: .5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &-title{
-        // margin-bottom: 0;
         display: inline-block;
+        
+        flex: 1;
+        float: left;
+        margin-bottom: 0;
     }
     &-nav{
         display: inline-block;
