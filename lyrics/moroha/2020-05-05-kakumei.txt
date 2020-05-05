@@ -1,23 +1,14 @@
 lang: jp
-feat: kenshi-yonezu
 
+This song is actually one of the songs that really pushed me over the edge to try and make this website (which explains why it is the first song on the website too, I suppose).
 
-This is some text
+It was shown to me by a friend and I have listened to this song over and over so many times now. I am always compelled by the emotion I hear in the singer's voice and his words, however, for some bits of the song it's just a bit too fast for me and I can't fully understand it unless I were to, say, slow it down and properly think about the lyrics/translate the lyrics myself (hint hint) or find a translation somewhere.
 
-Actually, there's a new paragraph and all sorts here too
+Well, the thing is, I've looked and looked and there doesn't seem to be an English translation of this song anywhere on the internet. Even for just the transcription of the song, I could only find one source: [http://www.nextenglish.net/en/jpop/2805](http://www.nextenglish.net/en/jpop/2805) (I ended up transcribing the lyrics myself as well though, because the one on that website was the transcription of a variant of the song, which had slightly different lyrics).
 
----
+This is my first time seeing a song that seems to be so popular yet unpopular at the same time --- it's got 4.4M views on YouTube at the time of writing [[screenshot](https://i.imgur.com/8Cf2C7t.png)]. I haven't found a single English comment in the comments section so far though. Perhaps this suggests that this song is popular in Japan but not very popular elsewhere.
 
-Getting funky now, with the page breaks n' all!!
-
-> what, even block quotes?? No way
-
-# WOW
-
-- even lists and stuff?
-- you bet!
-    - omg even multilevel
-    - *YES*
+I wonder if this translation will help more non-Japanese-speaking people find this song. I hope so. It's a good song.
 
 ---[革命]---
 
@@ -28,26 +19,86 @@ Getting funky now, with the page breaks n' all!!
 
 いやあしかしこの前の飲み会も
 めっちゃめっちゃ盛り上がったよな
-アイズ目覚めたら逗子にいたらしいぜ
+アイツ目覚めたら逗子にいたらしいぜ
+
+笑えるよな？
+いやあ俺たち本当に幸せもんだよ
+デッカイ夢があって
+それを語り合える友達がいて
+
+女はいないけど
+酒はうまいし
+悪くない！
+
+悪くない。。。
+とは思うんだ。。。
+
+けどさ。。。
+いや、全然大した話じゃないんだけど
+俺お前に言わなくちゃいけないことあるんだよね。。。
+
+そういやさ
+飲み会の帰り道突如やってくる
+あの虚しさ。。。
+あれ。。。なんだろうね
 
 ---[Kakumei]---
 
 Kanpai!
 Tanjyoubi omedetou!
 Iyaa shikashi atto iu madayona
-Oretachi kotoshi san-jyuu-roku daze
+Oretachi kotoshi ni-jyuu-roku daze
 
 Iyaa shikashi kono mae no nomikaimo
 meccha meccha moriagattayona
-aizu mezametara zushi ni itarashii ze
+aitsu mezametara zushi ni itarashii ze
+
+Waraeru yo na?
+Iyaa oretachi hontouni shiawase mondayo
+dekkai yume ga atte
+sore wo katariaeru tomodachi ga ite
+
+Onna ha inai kedo
+Sake ha umai shi
+Warukunai!
+
+Warukunai...
+to wa... omounda...
+
+Kedo sa...
+Iya, zenzen taishita hanashi jyanaindakedo
+ore omae ni iwanakucha ikenai koto arundayo ne...
+
+Sou iya sa
+Nomikai no kaerimichi totsujo yattekuru
+ano munashisa...
+Are... nandarou ne
 
 ---[Revolution]---
 
 Cheers!
 Happy birthday!
-Ah~ but, it's still a while now
-We're gonna be 26 today ya know
+Ah~ but I guess there's still a while to go huh?
+We're gonna be 26 this year ya know
 
-Iyaa shikashi kono mae no nomikaimo
-meccha meccha moriagattayona
-aizu mezametara zushi ni itarashii ze
+Ah~ but the drinking party we just had-
+it was super super crazy wasn't it
+When that guy woke up, he seemed to be in Zushi
+
+Ah~ but us guys really have it so good
+We dream big dreams
+and have friends to talk about them with
+
+I don't have a girl but...
+The sake tastes good
+This ain't bad at all!
+
+Ain't bad at all...
+I think.
+
+But uh...
+I mean-... It isn't a big deal or anything at all
+but there's something I have to tell you
+
+Come to think of it,
+That sudden wave of emptiness on the way home from the drinking party...
