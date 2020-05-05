@@ -1,23 +1,14 @@
-# # # # # # # #
-#   K i k o   #
-# # # # # # # #
-
 # Basic
-name:               "Kiko"
-description:        "a clean, lightweight and minimalistic blog theme for jekyll"
+name:               "Pixel's Translations"
 
-# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
-url:                "//kiko.gfjaru.com"
-author:             "gfjaru"
+# jekyll-seo-tag
+url:                "//pixelzerg.com/translation/"
+author:             "pixelzerg"
 twitter:
-  username:         "gfjaru"
-#facebook:
-#  app_id:           1234
-#    publisher:      1234
+  username:         "pixelzerg"
 
 # URL
-baseurl:            ""
-#baseurl:            "" #For Root Domain
+baseurl:            "/translation"
 permalink:          /:year/:month/:day/:title/
 
 # Markdown
@@ -28,9 +19,6 @@ nav:
   - name:           "About"
     remote:         false
     localpath:      "about"
-  - name:           "Download"
-    remote:         true
-    href:           "//github.com/gfjaru/Kiko/releases"
 
 # Sass
 sass:
@@ -51,5 +39,5 @@ defaults:
     values:
       layout:       "post"
 
-gems:
+plugins:
   - jekyll-seo-tag
