@@ -1,10 +1,8 @@
-- artist: "moroha"
-  name:
-    - "Moroha"
-    - "bruh"
+moroha:
+  - "Moroha"
+  - "bruh"
 
-- artist: "kenshi-yonezu"
-  name:
-    - "米津 玄師"
-    - "Kenshi Yonezu"
-    - "Kennedy Yonezarath"
+kenshi-yonezu:
+  - "米津 玄師"
+  - "Kenshi Yonezu"
+  - "Kennedy Yonezarath"

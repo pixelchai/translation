@@ -3,8 +3,14 @@
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </h2>
     <div class="meta">
-        {% for artist in post.artists %}
-        <a class="artist" href="{{ site.baseurl }}/{{ artist }}">{{ artist }}</a>
+        {% assign i = post.artists | size %}
+        {% for artist_id in post.artists %}
+            {% include artist-name.html %}
+            <a class="artist" href="{{ site.baseurl }}/{{ artist_id }}">{{ artist_name }}</a>
+            {% if i > 1 %}
+                <span class="separator">/</span>
+            {% endif %}
+            {% assign i = i | minus: 1 %}
         {% endfor %}
         <time>{{ post.date | date_to_string }}</time>
     </div>
