@@ -1,6 +1,6 @@
 {% assign i = include.artist_ids | size %}
 {% for artist_id in include.artist_ids %}
-    <a class="artist" href="{{ site.baseurl }}/{{ artist_id }}">{% include artist-name artist_id=artist_id %}</a>
+    <a class="artist" href="{{ site.baseurl }}/lyrics/{{ artist_id }}">{% include artist-name artist_id=artist_id %}</a>
     {% if i > 1 %}
         <span class="separator">/</span>
     {% endif %}
