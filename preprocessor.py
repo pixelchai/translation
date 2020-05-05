@@ -37,8 +37,7 @@ def make_artist(artist_id):
     return artist_folder, posts_folder
 
 def process_content(content):
-    content = content.strip()
-    return content
+    return content.strip().replace("\n", "<br>\n")
 
 class LyricsFile:
     def __init__(self, file_name, artist_id):
