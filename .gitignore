@@ -4,3 +4,4 @@ docs/Gemfile.lock
 docs/.jekyll-cache/
 docs/.jekyll-metadata
 .vscode/
+.idea/

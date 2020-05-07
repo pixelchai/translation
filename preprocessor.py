@@ -8,10 +8,15 @@ PATH_LYRICS = "lyrics"
 YAML_SEPARATOR = "---\n"
 YAML_KEY_VALUE = "{0: <16}: {1}\n"
 
-HTML_SECTION = '<div class="lyrics">\n{}\n</div>\n'
-HTML_SECTION_TYPE = '<div class="lyrics-type">{}<hr></div>\n'
-HTML_SECTION_TITLE = '<h2>{}</h2>\n'
-HTML_SECTION_CONTENT = '<p>\n{}\n</p>'
+HTML_LYRICS = '<div class="lyrics">\n{}\n</div>\n'
+HTML_SECTION = '<div class="lyrics-section">\n{}</div>\n'
+HTML_SECTION_PART = '<p class="lyrics-{}">\n{}\n</p>\n'
+
+lyrics_id_names = {
+    1: ["translation"],
+    2: ["transcription", "translation"],
+    3: ["transcription", "transliteration", "translation"],
+}
 
 lang_config = {
     "jp": {
@@ -45,28 +50,32 @@ class LyricsFile:
         self.artist_ids = [artist_id]
 
         self.lang = ""
-        self.section_titles = []
-        self.section_texts = []
+        self.titles = []
+        self.sections = []
 
         self.post = ""
 
     def _parse_header(self, header):
         for match in re.finditer(r"([a-zA-Z\-_]+):\s+([a-zA-Z\-_]+)", header):
             key, value = match.groups()
+            value_split = [x.strip().replace(";com", ",") for x in value.split(",")]
 
             if key == "lang":
                 self.lang = value
             elif key == "feat":
-                self.artist_ids.extend(value.split(","))
-    
+                self.artist_ids.extend(value_split)
+            elif key == "title":
+                self.titles.extend(value_split)
+
     def _parse_contents(self, contents):
-        for match in re.finditer(r"-{3,}\[(.+)\]-{3,}\s*([\s\S]+?)(?=-{3,}\[(?:.+)\]-|$)", contents):
-            title, text = match.groups()
-            self.section_titles.append(title)
-            self.section_texts.append(text)
+        for match in re.finditer(r"([\s\S]*?)(?:^\/\/\s*$|$(?![\r\n]))", contents, re.M):
+            section = match.group(1).strip()
+            parts = [x.strip() for x in re.split(r"\n{2,}", section)]
+
+            self.sections.append(parts)
     
     def parse(self, text):
-        header, post, contents = re.match(r"^((?:[a-zA-Z\-_]+:\s+[a-zA-Z\-_]+\n)+)\n([\s\S]*?)(?=-{3,}\[(?:.+)\]-{3,})([\s\S]*)", text).groups()
+        header, post, contents = [x.group(1) for x in re.finditer(r"([\s\S]*?)(?:^\/\/-{3,}$|$(?![\r\n]))", text, re.M)][:3]
         self.post = post.strip()
         self._parse_header(header)
         self._parse_contents(contents)
@@ -83,7 +92,7 @@ class LyricsFile:
         with open(os.path.join(posts_folder, file_name + ".md"), "w") as fh:
             fh.write(YAML_SEPARATOR)
             fh.write(YAML_KEY_VALUE.format("layout", "post"))
-            fh.write(YAML_KEY_VALUE.format("title", '"' + "・".join(self.section_titles) + '"'))
+            fh.write(YAML_KEY_VALUE.format("title", '"' + "・".join(self.titles) + '"'))
             fh.write(YAML_KEY_VALUE.format("artist_ids", str(self.artist_ids)))
             fh.write(YAML_SEPARATOR)
             fh.write("\n")
@@ -91,18 +100,17 @@ class LyricsFile:
             fh.write(self.post)
             fh.write("\n\n")
 
-            num_sections = len(self.section_texts)
-            for section_no in range(num_sections):
+            lyrics_inner = ""
+            for section in self.sections:
                 section_inner = ""
-                section_inner += HTML_SECTION_TYPE.format(lang_config[self.lang]["sections"][section_no])
-                section_inner += HTML_SECTION_TITLE.format(self.section_titles[section_no])
 
-                section_inner += HTML_SECTION_CONTENT.format(process_content(self.section_texts[section_no]))
+                id_names = lyrics_id_names[len(section)]
+                for part_no, part in enumerate(section):
+                    section_inner += HTML_SECTION_PART.format(id_names[part_no], part)
 
-                fh.write(HTML_SECTION.format(section_inner))
-
-                if section_no < num_sections - 1:
-                    fh.write("\n")
+                lyrics_inner += HTML_SECTION.format(section_inner)
+            
+            fh.write(HTML_LYRICS.format(lyrics_inner))
 
 
 if __name__ == "__main__":
