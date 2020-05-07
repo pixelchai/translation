@@ -18,12 +18,6 @@ lyrics_id_names = {
     3: ["transcription", "transliteration", "translation"],
 }
 
-lang_config = {
-    "jp": {
-        "sections": ["Kanji", "Roumaji", "English"]
-    }
-}
-
 def make_artist(artist_id):
     artist_folder = os.path.join(PATH_OUTPUT, PATH_LYRICS, artist_id)
     posts_folder = os.path.join(artist_folder, "_posts")
@@ -56,7 +50,7 @@ class LyricsFile:
         self.post = ""
 
     def _parse_header(self, header):
-        for match in re.finditer(r"([a-zA-Z\-_]+):\s+([\w,]+)", header):
+        for match in re.finditer(r"([a-zA-Z\-_]+):\s+(.+$)", header, re.M):
             key, value = match.groups()
             value_split = [x.strip().replace(";com", ",") for x in value.split(",")]
 
