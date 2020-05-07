@@ -56,7 +56,7 @@ class LyricsFile:
         self.post = ""
 
     def _parse_header(self, header):
-        for match in re.finditer(r"([a-zA-Z\-_]+):\s+([a-zA-Z\-_]+)", header):
+        for match in re.finditer(r"([a-zA-Z\-_]+):\s+([\w,]+)", header):
             key, value = match.groups()
             value_split = [x.strip().replace(";com", ",") for x in value.split(",")]
 
@@ -100,6 +100,8 @@ class LyricsFile:
 
             fh.write(self.post)
             fh.write("\n\n")
+            fh.write("---")
+            fh.write("\n\n")
 
             lyrics_inner = ""
             for section in self.sections:
@@ -107,7 +109,7 @@ class LyricsFile:
 
                 id_names = lyrics_id_names[len(section)]
                 for part_no, part in enumerate(section):
-                    section_inner += HTML_SECTION_PART.format(id_names[part_no], part)
+                    section_inner += HTML_SECTION_PART.format(id_names[part_no], process_content(part))
 
                 lyrics_inner += HTML_SECTION.format(section_inner)
             

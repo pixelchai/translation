@@ -47,12 +47,25 @@
 }
 
 .lyrics {
-    margin-bottom: 3rem;
+    text-align: center;
+    margin: 3rem 0;
 
     &-type {
         font-weight: 600;
         hr {
             margin-top: 0.3rem;
         }
+    }
+
+    &-section {
+        padding: 1rem 0;
+    }
+
+    &-transliteration {
+        font-style: italic;
+    }
+
+    &-translation {
+        font-weight: bold;
     }
 }
