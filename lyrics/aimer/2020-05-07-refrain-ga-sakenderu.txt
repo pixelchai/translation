@@ -3,4 +3,75 @@ lang: jp
 feat: yumi-matsutoya
 //---
 
+This song is definitely one of my favourite in Aimer's album, "Bitter and Sweet". The album is one of Aimer's earlier albums and is basically a collection of covers. It's often overlooked but there are some great stuff in there, and I especially like the English covers too.
+
+That said, I also do love the original version as well, which is by Yumi Matsutoya (AKA Yumi Arai). In fact, listening to the original is what first led me down the rabbit hole of 80's Japanese music which ended up becoming the defining sound of late 2019 and early 2020 for me -- as I would often just play those types of songs in the background as I worked on my Computer Science coursework.
+
+Yumi Matsutoya has some other great songs too, probably most famously [春よ来い](https://www.youtube.com/watch?v=DgUEXe019l0) but I also really like [雨の街を](https://www.youtube.com/watch?v=7EEI30qzLMg) and [真珠のピアス](https://www.youtube.com/watch?v=OSdFHH9jghY).
+
+-- Pixel
+
+Source for the transcription (Kanji): Adapted from [utamap.com/showkasi.php?surl=36429](http://www.utamap.com/showkasi.php?surl=36429)<br>
+Translation status: WIP
+
 //---
+
+どうして どうして僕たちは
+出逢ってしまったのだろう？
+こわれるほど抱きしめた
+最後の春に⾒た⼣陽は
+うろこ雲照らしながら
+ボンネットに消えてった
+
+Doushite doushite bokutachi wa
+Deatte shimatta no darou
+Kowareru hodo dakishimeta
+Saigo no haru ni mita yuuhi wa
+Urokokumo terashi nagara
+Bonnetto ni kietetta
+
+Why oh why did we
+have to meet, I wonder?
+You held me so hard that I fell apart
+We watched as that final spring's sunset
+lit up the Cirrocumulus clouds
+and dissappeared into the car's bonnet
+
+//
+
+引き返してみみるわ
+ひとつ前のカーブまで
+いつか海に降りた
+あの駐⾞場に
+あなたがいたようで
+
+Hikikaeshite miru wa
+Hitotsu mae no kaabu made
+Itsuka umi ni orita
+Ano chuushajou ni
+Anata ga ita you de
+
+I try return back
+until I reach that previous curve
+And when I reached the beach
+It almost felt like I could feel you in that car park
+
+//
+
+どうして どうして私達
+離れてしまったのだろう
+あんなに愛してたのに
+岬の灯冴えはじめる
+同じ場所に⽴つけれど
+潮⾵ 肩を抱くだけ
+
+Doushite doushite watashitachi
+Hanarete shimatta no darou
+Anna ni aishiteta noni
+Misaki no akari sae hajimeru
+Onaji basho ni tatsu keredo
+Shiokaze kata wo daku dake
+
+Why oh why did we
+have to get separated
+even though I loved you that much
