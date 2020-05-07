@@ -8,7 +8,7 @@ PATH_LYRICS = "lyrics"
 YAML_SEPARATOR = "---\n"
 YAML_KEY_VALUE = "{0: <16}: {1}\n"
 
-HTML_LYRICS = '<div class="lyrics">\n{}\n</div>\n'
+HTML_LYRICS = '<div class="lyrics">\n{}</div>\n'
 HTML_SECTION = '<div class="lyrics-section">\n{}</div>\n'
 HTML_SECTION_PART = '<p class="lyrics-{}">\n{}\n</p>\n'
 
@@ -70,9 +70,10 @@ class LyricsFile:
     def _parse_contents(self, contents):
         for match in re.finditer(r"([\s\S]*?)(?:^\/\/\s*$|$(?![\r\n]))", contents, re.M):
             section = match.group(1).strip()
-            parts = [x.strip() for x in re.split(r"\n{2,}", section)]
 
-            self.sections.append(parts)
+            if len(section) > 0:
+                parts = [x.strip() for x in re.split(r"\n{2,}", section)]
+                self.sections.append(parts)
     
     def parse(self, text):
         header, post, contents = [x.group(1) for x in re.finditer(r"([\s\S]*?)(?:^\/\/-{3,}$|$(?![\r\n]))", text, re.M)][:3]
