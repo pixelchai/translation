@@ -5,5 +5,7 @@ layout: default
 <h1 class="page-title">{% include artist-name artist_id=page.artist_id %}</h1>
 
 {% for post in site.posts %}
-  {% include post-item.html %}
+  {% if post.artist_ids contains page.artist_id %}
+    {% include post-item.html %}
+  {% endif %}
 {% endfor %}
