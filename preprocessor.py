@@ -25,7 +25,7 @@ def make_artist(artist_id):
     try:
         os.makedirs(posts_folder)
 
-        with open(os.path.join(artist_folder, "index.html"), "w") as fh:
+        with open(os.path.join(artist_folder, "index.html"), "w", encoding="utf8") as fh:
             fh.write(YAML_SEPARATOR)
             fh.write(YAML_KEY_VALUE.format("layout", "artist"))
             fh.write(YAML_KEY_VALUE.format("artist_id", artist_id))
@@ -84,7 +84,7 @@ class LyricsFile:
 
         file_name = os.path.splitext(self.file_name)[0]
 
-        with open(os.path.join(posts_folder, file_name + ".md"), "w") as fh:
+        with open(os.path.join(posts_folder, file_name + ".md"), "w", encoding="utf8") as fh:
             fh.write(YAML_SEPARATOR)
             fh.write(YAML_KEY_VALUE.format("layout", "post"))
             fh.write(YAML_KEY_VALUE.format("title", '"' + "・".join(self.titles) + '"'))
@@ -128,7 +128,7 @@ if __name__ == "__main__":
         for lyrics_file_name in os.listdir(artist_dir):
             name = re.match(r"(?:\d+-){3}(.+)\.", lyrics_file_name).group(1)
             
-            with open(os.path.join(artist_dir, lyrics_file_name)) as fh:
+            with open(os.path.join(artist_dir, lyrics_file_name), encoding="utf8") as fh:
                 LyricsFile(lyrics_file_name, artist_id)\
                     .parse(fh.read())\
                     .generate()
