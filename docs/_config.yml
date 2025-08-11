@@ -2,10 +2,10 @@
 name:               "Pixel's Translations"
 
 # jekyll-seo-tag
-url:                "//pixelzerg.com/translation/"
-author:             "pixelzerg"
+url:                "//pixelchai.com/translation/"
+author:             "pixelchai"
 twitter:
-  username:         "pixelzerg"
+  username:         "pixelchai"
 
 # URL
 baseurl:            "/translation"
