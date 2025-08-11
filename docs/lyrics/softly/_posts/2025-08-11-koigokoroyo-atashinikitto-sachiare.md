@@ -8,10 +8,21 @@ I randomly got recommended this song recently and it just sounds so wholesome! A
 
 Due to a rare turn of events, I actually have some free time these days, so why not? And I even have a translation website (the one you are reading now) set up and ready to go!
 
+<p>
+<details>
+<summary>Some technical notes</summary>
+<p>
 Caveat on that: I set this website up over 5 years ago, in 2020. I completely forgot I had done this, but turns out I made a kind-of involved website generation procedure, including my own custom preprocessor.
-Lyrics are written in a custom markdown-like file format I made, which then sends generated data into [Jekyll](https://jekyllrb.com/), which then generates the site. [Here is the link to the source code if you're interested](https://github.com/pixelchai/translation/tree/24d37310e32bec4614d8f3a43cbb7d9a1dda40e7).
-Thankfully it looks like GitHub pages automatically handles the Jekyll part, so I just gotta run the preprocessor and hope nothing has broken in 5 years. I also don't exactly remember what my file format supports exactly, but we'll see. Maybe I'll even end up giving it more functionality, who knows?
-The main thing is the content itself though, and if you're reading this, it must have all at least sorta worked :)
+Lyrics are written in a custom markdown-like file format I made, which then sends generated data into <a href="https://jekyllrb.com/">Jekyll</a>, which then generates the site. <a href="https://github.com/pixelchai/translation/tree/24d37310e32bec4614d8f3a43cbb7d9a1dda40e7">Here is the link to the source code if you’re interested</a>.
+Thankfully it looks like GitHub pages automatically handles the Jekyll part, so I just gotta run the preprocessor and hope nothing has broken in 5 years. I also don’t exactly remember what my file format supports exactly, but we’ll see. Maybe I’ll even end up giving it more functionality, who knows?
+The main thing is the content itself though, and if you’re reading this, it must have all at least sorta worked :)
+</p>
+<p>
+Update: contrary to my fears, I was able to get everything working perfectly pretty seamlessly, and I even <a href="https://github.com/pixelchai/translation/commit/6fb271d33c419eb5ab04b12565fc0ab8bf933b99">improved the preprocessor a bit</a>. Not bad going, me from the past! Especially for something I <a href="{{ site.baseurl }}/about/">self-proclaimed</a> would be “bad”.
+I guess it's because my scripts had very few dependencies (in fact the preprocessor only uses standard Python libraries), so less likelihood of something going wrong.
+</p>
+</details>
+</p>
 
 Also, quick note on just how much the world has changed since my last update to this site. Back in 2020, LLMs were still nacent, and there was still plenty of room for human-crafted translations and all hopes and dreams and whatever else that went into it.
 This site has always been something that's just for fun for me though, and that hasn't changed.
