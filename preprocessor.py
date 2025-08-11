@@ -5,18 +5,14 @@ import shutil
 PATH_OUTPUT = "docs"
 PATH_LYRICS = "lyrics"
 
-YAML_SEPARATOR = "---\n"
-YAML_KEY_VALUE = "{0: <16}: {1}\n"
-
-HTML_LYRICS = '<div class="lyrics">\n{}</div>\n'
-HTML_SECTION = '<div class="lyrics-section">\n{}</div>\n'
-HTML_SECTION_PART = '<p class="lyrics-{}">\n{}\n</p>\n'
-
 lyrics_id_names = {
     1: ["translation"],
     2: ["transcription", "translation"],
     3: ["transcription", "transliteration", "translation"],
 }
+
+YAML_SEPARATOR = "---\n"
+YAML_KEY_VALUE = "{0: <16}: {1}\n"
 
 def make_artist(artist_id):
     artist_folder = os.path.join(PATH_OUTPUT, PATH_LYRICS, artist_id)
@@ -37,6 +33,23 @@ def make_artist(artist_id):
 
 def process_content(content):
     return content.strip().replace("\n", "<br>\n")
+
+def parse_artists_config(path_artist_config):
+    configured_artists = set()
+
+    with open(path_artist_config, "r", encoding="utf8") as f:
+        for line in f:
+            match = re.match(r"^([\w-]+):$", line.strip())
+            if match:
+                artist_id = match.group(1)
+                configured_artists.add(artist_id)
+
+    return configured_artists
+
+
+HTML_LYRICS = '<div class="lyrics">\n{}</div>\n'
+HTML_SECTION = '<div class="lyrics-section">\n{}</div>\n'
+HTML_SECTION_PART = '<p class="lyrics-{}">\n{}\n</p>\n'
 
 class LyricsFile:
     def __init__(self, file_name, artist_id):
@@ -116,13 +129,21 @@ def main():
         shutil.rmtree(path_out_lyrics)
 
     # copy artist.yml file
-    shutil.copy2(os.path.join(PATH_LYRICS, "artists.yml"),
+    path_original_artists_config = os.path.join(PATH_LYRICS, "artists.yml")
+    shutil.copy2(path_original_artists_config,
                  os.path.join(PATH_OUTPUT, "_data"))
+    
+    configured_artists = parse_artists_config(path_original_artists_config)
+    print(f"Found {len(configured_artists)} configured artists in {path_original_artists_config}.")
     
     # preprocess lyrics files
     for artist_id in os.listdir(PATH_LYRICS):
         artist_dir = os.path.join(PATH_LYRICS, artist_id)
-        if not os.path.isdir(artist_dir): continue
+        if not os.path.isdir(artist_dir):
+            continue
+
+        if artist_id not in configured_artists:
+            raise RuntimeError(f"Did not find artist '{artist_id}' in the lyrics/artists.yml file. Don't forget to update that file!")
 
         for lyrics_file_name in os.listdir(artist_dir):
             name = re.match(r"(?:\d+-){3}(.+)\.", lyrics_file_name).group(1)
@@ -131,7 +152,8 @@ def main():
                 LyricsFile(lyrics_file_name, artist_id)\
                     .parse(fh.read())\
                     .generate()
-
+                
+                print(f"Processed {lyrics_file_name} for artist '{artist_id}'.")
 
 
 if __name__ == "__main__":
