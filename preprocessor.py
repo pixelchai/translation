@@ -109,8 +109,7 @@ class LyricsFile:
             
             fh.write(HTML_LYRICS.format(lyrics_inner))
 
-
-if __name__ == "__main__":
+def main():
     # delete previously generated output
     path_out_lyrics = os.path.join(PATH_OUTPUT, PATH_LYRICS)
     if os.path.isdir(path_out_lyrics):
@@ -132,3 +131,8 @@ if __name__ == "__main__":
                 LyricsFile(lyrics_file_name, artist_id)\
                     .parse(fh.read())\
                     .generate()
+
+
+
+if __name__ == "__main__":
+    main()
