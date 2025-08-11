@@ -1,6 +1,8 @@
-title: 恋心よあたしにきっと幸あれ,Koigokoroyo Atashinikitto Sachiare,Wish you Happiness My Love!
-lang: jp
-//---
+---
+layout          : post
+title           : "恋心よあたしにきっと幸あれ・Koigokoroyo Atashinikitto Sachiare・Wish you Happiness My Love!"
+artist_ids      : ['softly']
+---
 
 I randomly got recommended this song recently and it just sounds so wholesome! At least, from what I understand of the lyrics. Guess I figured I'd write out a proper translation to make sure I'm understanding it right.
 
@@ -19,6 +21,12 @@ I could use these other sources to double-check my work and help me get better!
 
 Though I must say, this song happens to be one which doesn't seem to have English translations readily available online, which does give me a bit more motivation~.
 
-//---
+---
 
+<div class="lyrics">
+<div class="lyrics-section">
+<p class="lyrics-translation">
 todo
+</p>
+</div>
+</div>
