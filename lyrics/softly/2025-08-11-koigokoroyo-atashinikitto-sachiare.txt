@@ -1,0 +1,61 @@
+title: 恋心よあたしにきっと幸あれ,Koigokoroyo Atashinikitto Sachiare,Wish you Happiness My Love!
+lang: jp
+//---
+
+I randomly got recommended this song recently and it just sounds so wholesome! At least, from what I understand of the lyrics. Guess I figured I'd write out a proper translation to make sure I'm understanding it right.
+
+Due to a rare turn of events, I actually have some free time these days, so why not? And I even have a translation website (the one you are reading now) set up and ready to go!
+
+Caveat on that: I set this website up over 5 years ago, in 2020. I completely forgot I had done this but turns out I wrote my own custom preprocessor for this site. Lyrics are written in a custom markdown-like file format I made, which then pipes generated data into [Jekyll](https://jekyllrb.com/), which then generates the site. [Here is the link to the source code if you're interested](https://github.com/pixelchai/translation/tree/24d37310e32bec4614d8f3a43cbb7d9a1dda40e7).
+The main problem is Jekyll, really. Especially since the version I was using in 2020 is probably quite outdated by now. It'll be quite a pain to get this whole process up and running perfectly again. I might modernise it, or wrap everything using something like Docker to make it work, who knows. If you're reading this then clearly whatever I did must have at least sorta worked :)
+I also don't fully remember what features I included in my file-format hahah.
+
+Also, quick note on just how much the world has changed since my last update to this site. Back in 2020, LLMs were still nacent, and there was still plenty of room for human-crafted translations and all hopes and dreams and whatever else that went into it.
+This site has always been something that's just for fun for me though, and that hasn't changed.
+It helps me personally learn a lot, and I just feel like I properly _understand_ songs much better by translating it by hand.
+So I'm not in the slightest dissuaded by LLMs in continuing this site, nor indeed by if there are other translations out there already.
+I could use these other sources to double-check my work and help me get better!
+
+Though I must say, this song happens to be one which doesn't seem to have English translations readily available online, which does give me a bit more motivation~.
+
+//---
+
+誰にも懐かしいあの日がある
+そんな日がもう二度と来ないとしても
+涙の数だけ強くなれるって
+あの時流れていたから
+
+会いたい会いたい会いたい
+いつだって彼に会いたい
+笑顔になりたい
+恋心よあたしにきっと幸あれ
+
+ハレの日彼を想って
+笑って『カワイイね』って照れくさく彼は言うの
+優しくて愛しくて
+ずっとあたしの好きな人
+
+泣いてもおかしくない毎日なのに
+今日まで本当よく頑張れました
+思わずこぼした嫌なことも
+言うじゃない？笑う門に福来たる＼(^o^)／
+
+会えない会えない会えない
+そんな日はもう泣きたい
+今すぐ会えたら
+恋心よあたしにきっと幸あれ
+
+何度も振り返って
+笑って『また明日』って寂しそうにあたし言うの
+苦しくて愛しくて
+ずっとあたしの好きな人
+
+会いたい会いたい会いたい
+いつだって彼に会いたい
+笑顔になりたい
+恋心よあたしにきっと幸あれ
+
+ハレの日彼を想って
+笑って『カワイイね』って照れくさく彼は言うの
+優しくて愛しくて
+ずっとあたしの好きな人
